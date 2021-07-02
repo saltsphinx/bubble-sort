@@ -10,13 +10,15 @@ Whats the desired output?
 An array of numbers sorted from least to greatest
 
 Given the inputs, what are the steps needed to produce the output?
+
 When bubble method is called on an array,
 Initialize iterations variable, set to the number of items in the array minus one,
 Initialize sorting_array variable and set it to the value of the array argument,
+Create while loop that runs until iterations is equal to 1,
 Equal the value of sorting_array and initialize sorted? variable to equal sorting method, and pass it sorting_array
-Create a method sorting that steps through each item of an array and parameters are an array and the iterations variable,
+Create a method sorting that steps through each item of an array, set its parameters to an array and the iterations variable,
 Ititialize variables for i(iteration) = 0, and passes = 0,
-Create a for while loop that iterates through the given away, and continues until i variable is equal to the iteration argument
+Create a while loop that iterates through the given array, and continues until i variable is equal to the iteration argument
 If index of n(current number in array) is greater than n+1, swap their places, increment passes by 1 and continue to n+1,
 If index of n is equal to n+1, continue to n+1,
 If passes is equal to 0, return two values, the array and true,

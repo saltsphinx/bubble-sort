@@ -1,26 +1,23 @@
-class Array
-    def bubble 
-        iterations = self.length - 1
-        sorting_array = self
-        while iterations > 1 do
-            sorting_array, is_sorted = sorting(sorting_array, iterations)
-            return sorting_array if sorted? 
-            iterations -= 1
-        end
+require 'pry'
+
+def bubble_sort array
+    iterations = array.length - 1
+    sorting_array = array
+    while iterations > 1 do
+        sorting_array = sorting(sorting_array, iterations)
+        iterations -= 1
     end
+    sorting_array
 end
 
 def sorting array, iterations
-    i, passes = 0, 0
+    i = 0
     return_array = array
     while i < iterations do
         if return_array[i] > return_array[i + 1]
             return_array[i], return_array[i + 1] = return_array[i + 1], return_array[i]
-            passes += 1
         end
+        i += 1
     end
-    return return_array, true if passes == 0
     return_array
 end
-
-puts [6, 2, 7, 9, 4, 1].bubble
